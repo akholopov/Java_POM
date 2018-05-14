@@ -7,40 +7,40 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class BasePage {
 
-    @FindBy (css = "a[data-ga-click='Header, click, Nav menu - item:features']")
-    private SelenideElement featureButton;
+    @FindBy (css = "a[title='About us']")
+    private SelenideElement aboutUsButton;
 
-    @FindBy (css = "a[data-ga-click='Header, click, Nav menu - item:business']")
-    private SelenideElement businessButton;
+    @FindBy (css = "a[title='Services']")
+    private SelenideElement servicesButton;
 
-    @FindBy (css = "a[data-ga-click='Header, click, Nav menu - item:explore']")
-    private SelenideElement exploreButton;
+    @FindBy (css = "a[title='Blog']")
+    private SelenideElement blogButton;
 
-    @FindBy (css = "a[data-ga-click='Header, click, Nav menu - item:marketplace']")
-    private SelenideElement marketplaceButton;
+    @FindBy (css = "a[title='Contact']")
+    private SelenideElement contactButton;
 
     @FindBy (css = "a[data-ga-click='Header, click, Nav menu - item:pricing']")
     private SelenideElement pricingButton;
 
 
-    public FeaturesPage goToFeaturePage() {
-        featureButton.click();
-        return page(FeaturesPage.class);
+    public AboutUsPage goToAboutUsPage() {
+        aboutUsButton.click();
+        return page(AboutUsPage.class);
     }
 
-    public BusinessPage goToBusinessPage() {
-        businessButton.click();;
-        return page(BusinessPage.class);
+    public ServicesPage goToServicesPage() {
+        servicesButton.click();;
+        return page(ServicesPage.class);
     }
 
-    public ExplorePage goToExplorePage() {
-        exploreButton.click();
-        return page(ExplorePage.class);
+    public BlogPage goToBlogPage() {
+        blogButton.click();
+        return page(BlogPage.class);
     }
 
-    public MarketplacePage goToMarketplacePage() {
-        marketplaceButton.click();
-        return page(MarketplacePage.class);
+    public ContactPage goToContactPage() {
+        contactButton.click();
+        return page(ContactPage.class);
     }
 
     public PricingPage goToPricingPage() {

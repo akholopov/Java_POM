@@ -4,6 +4,6 @@ import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Selenide.page;
 
-public class BusinessPage extends BasePage {
+public class ContactPage extends BasePage {
 
 }
