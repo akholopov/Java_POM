@@ -7,38 +7,32 @@ import static com.codeborne.selenide.Selenide.page;
 public class HeaderTest extends BaseTest {
 
     @Test
-    public void NavigateToFeaturesPage() {
+    public void NavigateToAboutUsPage() {
         page(BasePage.class)
-                .goToFeaturePage()
-                .valideIfOpened("https://github.com/features");
+                .goToAboutUsPage()
+                .valideIfOpened("http://demoqa.com/about-us/");
+        page(AboutUsPage.class)
+                .validateAboutUsArticle();
+    }
+
+    @Test(enabled = false)
+    public void NavigateToServicesPage() {
+        page(BasePage.class)
+                .goToServicesPage()
+                .valideIfOpened("http://demoqa.com/services/");
     }
 
     @Test
-    public void NavigateToBusinessPage() {
+    public void NavigateToBlogPage() {
         page(BasePage.class)
-                .goToBusinessPage()
-                .valideIfOpened("https://github.com/business");
+                .goToBlogPage()
+                .valideIfOpened("http://demoqa.com/blog/");
     }
 
     @Test
-    public void NavigateToExplorePage() {
+    public void NavigateToContactPage() {
         page(BasePage.class)
-                .goToExplorePage()
-                .valideIfOpened("https://github.com/explore");
-    }
-
-    @Test
-    public void NavigateToMarketplacePage() {
-        page(BasePage.class)
-                .goToMarketplacePage()
-                .valideIfOpened("https://github.com/marketplace");
-    }
-
-    @Test
-    public void NavigatePricingPage() {
-        page(BasePage.class)
-                .goToPricingPage()
-                .valideIfOpened("https://github.com/pricing");
-
+                .goToContactPage()
+                .valideIfOpened("http://demoqa.com/contact/");
     }
 }
